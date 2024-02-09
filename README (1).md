@@ -89,8 +89,6 @@ Subnetting
 
 
 
-[https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view](https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view) cheat sheet subnetting
-
 Network ID and Network Broadcast take 2 hosts usually
 
 IE
