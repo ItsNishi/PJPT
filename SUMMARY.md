@@ -11,3 +11,4 @@
     * [Viewing, Creating and Editing Files](pjpt/kali-linux/viewing-creating-and-editing-files.md)
     * [Starting and Stopping Services](pjpt/kali-linux/starting-and-stopping-services.md)
     * [Installing and Updating tools](pjpt/kali-linux/installing-and-updating-tools.md)
+    * [Scripting with Base](pjpt/kali-linux/scripting-with-base.md)

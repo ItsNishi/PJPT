@@ -31,3 +31,11 @@ This is used to show all commands for Linux. Not a main section in the course
 * ifconfig - only shows hardwire connections as **ip a,** but may need sudo
 * iwconfig - shows wireless connections
 
+ping #address -c 1 -- sends 1 packet
+
+&#x20;ping #address -c 1 > ip.txt -- saves to ping to text file
+
+cat ip.txt | grep "64 bytes" - extracts 1 line of data and pints to cli
+
+cat ip.txt | grep "64 bytes" | cut -d " " -f 4 -- cuts the data and only prints the ip. the delimiter uses " " to jump between the characters and finds the ip in the text file
+
