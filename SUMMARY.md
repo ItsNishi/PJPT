@@ -12,3 +12,7 @@
     * [Starting and Stopping Services](pjpt/kali-linux/starting-and-stopping-services.md)
     * [Installing and Updating tools](pjpt/kali-linux/installing-and-updating-tools.md)
     * [Scripting with Base](pjpt/kali-linux/scripting-with-base.md)
+  * [Python](pjpt/python/README.md)
+    * [Strings](pjpt/python/strings.md)
+    * [Math](pjpt/python/math.md)
+    * [Variables and Methods](pjpt/python/variables-and-methods.md)
