@@ -16,3 +16,5 @@
     * [Strings](pjpt/python/strings.md)
     * [Math](pjpt/python/math.md)
     * [Variables and Methods](pjpt/python/variables-and-methods.md)
+    * [Functions](pjpt/python/functions.md)
+    * [Boolean and Rlational Operators](pjpt/python/boolean-and-rlational-operators.md)
