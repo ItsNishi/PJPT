@@ -30,7 +30,7 @@ anything with a  (**.**) is a hidden IE: .java&#x20;
 
 &#x20;**Terminal Header Breakdown**
 
-(kali@kali)-\[\~] == (user@host - location)
+`(kali@kali)-[~] == (user@host - location)`
 
 
 
