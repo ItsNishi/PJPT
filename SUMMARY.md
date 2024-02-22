@@ -1,6 +1,8 @@
 # Table of contents
 
 * [PJPT](README.md)
+  * [Information Gathering (Reconnaissance)](pjpt/information-gathering-reconnaissance/README.md)
+    * [Passive Reconnaissance](pjpt/information-gathering-reconnaissance/passive-reconnaissance.md)
   * [Note Taking](pjpt/note-taking.md)
   * [Networking](<README (1).md>)
   * [Kali Linux](pjpt/kali-linux/README.md)
