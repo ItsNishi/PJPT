@@ -1,6 +1,6 @@
 # Users and Privileges
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 This Screenshot shows the permissions of the file in the directory
 

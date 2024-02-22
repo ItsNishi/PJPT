@@ -17,4 +17,6 @@
     * [Math](pjpt/python/math.md)
     * [Variables and Methods](pjpt/python/variables-and-methods.md)
     * [Functions](pjpt/python/functions.md)
-    * [Boolean and Rlational Operators](pjpt/python/boolean-and-rlational-operators.md)
+    * [Boolean and Relational Operators](pjpt/python/boolean-and-relational-operators.md)
+    * [Conditional Statements](pjpt/python/conditional-statements.md)
+    * [Lists/ Tuples](pjpt/python/lists-tuples.md)
