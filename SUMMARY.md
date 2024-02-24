@@ -1,8 +1,12 @@
 # Table of contents
 
 * [PJPT](README.md)
+  * [Five Stages of Ethical Hacking](pjpt/five-stages-of-ethical-hacking.md)
   * [Information Gathering (Reconnaissance)](pjpt/information-gathering-reconnaissance/README.md)
     * [Passive Reconnaissance](pjpt/information-gathering-reconnaissance/passive-reconnaissance.md)
+    * [Subdomains](pjpt/information-gathering-reconnaissance/subdomains.md)
+    * [Identifying Website Technologies](pjpt/information-gathering-reconnaissance/identifying-website-technologies.md)
+    * [Burp Suite](pjpt/information-gathering-reconnaissance/burp-suite.md)
   * [Note Taking](pjpt/note-taking.md)
   * [Networking](<README (1).md>)
   * [Kali Linux](pjpt/kali-linux/README.md)
@@ -30,4 +34,4 @@
     * [User Input](pjpt/python/user-input.md)
     * [Reading and Writing Files](pjpt/python/reading-and-writing-files.md)
     * [Classes and Objects](pjpt/python/classes-and-objects.md)
-* [Five Stages of Ethical Hacking](five-stages-of-ethical-hacking.md)
+* [Scanning & Enumeration](scanning-and-enumeration.md)
