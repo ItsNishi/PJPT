@@ -61,6 +61,7 @@ anything with a  (**.**) is a hidden IE: .java&#x20;
   * locate test.txt will show all the files named test.txt
   * sudo updatedb -- updates the index/database so you can find files that are new and not indexed
 * passwd - change password for user
+* locate - find certain file
 
 
 
