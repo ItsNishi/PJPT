@@ -72,10 +72,10 @@ Trusts
 
 
 
-| Types of Trusts | Description                                                                                   | Diagram                                                                     |
-| --------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Directional     | The trust direction flows from trusting domain to the trusted domain                          | <img src="../../.gitbook/assets/image (3).png" alt="" data-size="original"> |
-| Transitive      | The trust relationship is extended beyond a two-domain trust to include other trusted domains | <img src="../../.gitbook/assets/image (4).png" alt="" data-size="original"> |
+| Types of Trusts | Description                                                                                   | Diagram                                                  |
+| --------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Directional     | The trust direction flows from trusting domain to the trusted domain                          | <img src="broken-reference" alt="" data-size="original"> |
+| Transitive      | The trust relationship is extended beyond a two-domain trust to include other trusted domains | <img src="broken-reference" alt="" data-size="original"> |
 
 All domains in a forest trust all other domains in the forest
 

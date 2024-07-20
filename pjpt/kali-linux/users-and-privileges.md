@@ -1,6 +1,6 @@
 # Users and Privileges
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 This Screenshot shows the permissions of the file in the directory
 
@@ -26,15 +26,11 @@ The second group of permissions(RWX) is group membership or is a part of the own
 
 The Third group of permissions(RWX) is other users
 
+using ls -la /tmp
 
-
-using ls -la /tmp&#x20;
-
-the Temp folder has Read, Write, Execute&#x20;
+the Temp folder has Read, Write, Execute
 
 Don't have to worry about permissions as much
-
-
 
 creating a file and changing the permissions
 
@@ -46,7 +42,7 @@ chmod +rwx hello.txt = changes the permissions of the file to read, write, execu
 
 chmod 777 - changes all permission to read, write, execute
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 SSH PEM file require - 644 or 400
 
@@ -74,4 +70,4 @@ Sudoers - people has admin
 
 grep - used to pull strings or elements out of files
 
-grep 'sudo' /etc/group - checks who has admin privileges&#x20;
+grep 'sudo' /etc/group - checks who has admin privileges

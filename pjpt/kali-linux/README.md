@@ -10,11 +10,9 @@ sudo su - switch to root
 
 **\[\~**] in cli - means /home/(user)
 
-Can auto-complete in the terminal if you hit  tab
+Can auto-complete in the terminal if you hit tab
 
 **Terminal is Case sensitive**
-
-
 
 Color scheme to differentiate between different items
 
@@ -22,17 +20,11 @@ Dark Blue - Folder
 
 Lighter Blue - File
 
+anything with a (**.**) is a hidden IE: .java
 
-
-anything with a  (**.**) is a hidden IE: .java&#x20;
-
-
-
-&#x20;**Terminal Header Breakdown**
+**Terminal Header Breakdown**
 
 (kali@kali)-\[\~] == (user@host - location)
-
-
 
 **COMMANDS**
 
@@ -61,17 +53,7 @@ anything with a  (**.**) is a hidden IE: .java&#x20;
   * locate test.txt will show all the files named test.txt
   * sudo updatedb -- updates the index/database so you can find files that are new and not indexed
 * passwd - change password for user
-* locate - find certain file
-
-
-
-
 
 **SHORT CUTS**
 
 * CTRL + L - Clear terminal
-
-
-
-
-
