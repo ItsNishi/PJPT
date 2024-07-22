@@ -44,3 +44,6 @@
   * [Active Directory Overview](pjpt/active-directory-overview/README.md)
     * [AD DS Data Store](pjpt/active-directory-overview/ad-ds-data-store.md)
     * [Logical Active Directory Components](pjpt/active-directory-overview/logical-active-directory-components.md)
+  * [Initial AD Attack Vectors](pjpt/initial-ad-attack-vectors/README.md)
+    * [LLMNR Poisoning](pjpt/initial-ad-attack-vectors/llmnr-poisoning.md)
+    * [SMB Relay](pjpt/initial-ad-attack-vectors/smb-relay.md)

@@ -16,27 +16,24 @@ bool5 = "True"
 
 print(type(bool5)) #is a string
 
-
-
 \#Relational and boolean operators
 
 greater\_than = 7 > 5
 
-&#x20;less\_than = 5 < 7&#x20;
+less\_than = 5 < 7
 
-greater\_than\_equal\_to = 7 >=7&#x20;
+greater\_than\_equal\_to = 7 >=7
 
 less\_than\_equal\_to = 7 <= 7
 
-test\_and = True and True #True&#x20;
+test\_and = True and True #True
 
-test\_and2 = True and False #False&#x20;
+test\_and2 = True and False #False
 
-test\_or = True or True #True&#x20;
+test\_or = True or True #True
 
 test\_or2 = True or False #True
 
 test\_not = not True #False
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

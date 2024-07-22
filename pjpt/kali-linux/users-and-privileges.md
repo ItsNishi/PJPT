@@ -1,6 +1,6 @@
 # Users and Privileges
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 This Screenshot shows the permissions of the file in the directory
 
@@ -42,7 +42,7 @@ chmod +rwx hello.txt = changes the permissions of the file to read, write, execu
 
 chmod 777 - changes all permission to read, write, execute
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 SSH PEM file require - 644 or 400
 
