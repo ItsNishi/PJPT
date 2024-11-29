@@ -46,4 +46,6 @@
     * [Logical Active Directory Components](pjpt/active-directory-overview/logical-active-directory-components.md)
   * [Initial AD Attack Vectors](pjpt/initial-ad-attack-vectors/README.md)
     * [LLMNR Poisoning](pjpt/initial-ad-attack-vectors/llmnr-poisoning.md)
-    * [SMB Relay](pjpt/initial-ad-attack-vectors/smb-relay.md)
+    * [SMB Relay](pjpt/initial-ad-attack-vectors/smb-relay/README.md)
+      * [Gaining Shell Access](pjpt/initial-ad-attack-vectors/smb-relay/gaining-shell-access.md)
+  * [IPv6 Attacks Overview](pjpt/ipv6-attacks-overview.md)
