@@ -1,23 +1,27 @@
 # Math
 
-print (50 + 50)#add
+## Basic Operators
 
-print (50 - 50)#subtract
+```python
+print(50 + 50)    # Addition: 100
+print(50 - 50)    # Subtraction: 0
+print(50 * 50)    # Multiplication: 2500
+print(50 / 50)    # Division: 1.0 (float)
+print(50 ** 2)    # Exponent: 2500
+print(50 % 6)     # Modulo (remainder): 2
+print(50 // 6)    # Floor division (no decimal): 8
+```
 
-print (50 / 50)#divide
+## Operator Summary
 
-print (50 \* 50)#mulitply
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `+` | Addition | `5 + 3 = 8` |
+| `-` | Subtraction | `5 - 3 = 2` |
+| `*` | Multiplication | `5 * 3 = 15` |
+| `/` | Division (float) | `5 / 3 = 1.666...` |
+| `//` | Floor division | `5 // 3 = 1` |
+| `%` | Modulo | `5 % 3 = 2` |
+| `**` | Exponent | `5 ** 3 = 125` |
 
-print(50\*\* 2) #exponents&#x20;
-
-print(50 % 6) #modulo - takes what ever is left over
-
-print(50 / 6) #division with remainder (or a float)
-
-print(50 // 6) #no remainder
-
-there are other ways of doing math
-
-
-
-&#x20;its does PEMDAS
+Python follows **PEMDAS** order of operations.

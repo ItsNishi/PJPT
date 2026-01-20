@@ -1,105 +1,70 @@
 # Networking
 
-TCP - Transmission Control Protocol - Think as a connection-oriented protocol
+## TCP vs UDP
 
-TCP - better for higher reliability
+| Protocol | Type | Use Cases |
+|----------|------|-----------|
+| TCP | Connection-oriented | High reliability needed |
+| UDP | Connectionless | Streaming, DNS, VoIP |
 
-UDP - User Datagram Protocol - connectionless protocol
+## TCP Three-Way Handshake
 
-UDP - Streaming Service or DNS or VOIP
+1. Client sends **SYN**
+2. Server responds **SYN-ACK**
+3. Client sends **ACK**
 
+Important for understanding scanning behavior.
 
+## Common Ports
 
+### TCP
 
+| Port | Service | Notes |
+|------|---------|-------|
+| 21 | FTP | File transfer |
+| 22 | SSH | Secure shell |
+| 23 | Telnet | Unencrypted remote access |
+| 25 | SMTP | Email |
+| 53 | DNS | Name resolution |
+| 80 | HTTP | Web |
+| 110 | POP3 | Email retrieval |
+| 139 | SMB | File sharing (NetBIOS) |
+| 143 | IMAP | Email |
+| 443 | HTTPS | Secure web |
+| 445 | SMB | File sharing (direct) |
 
+**SMB (139/445)** - Most common target for pentesting.
 
+### UDP
 
-This is important for scanning.
+| Port | Service |
+|------|---------|
+| 53 | DNS |
+| 67/68 | DHCP |
+| 69 | TFTP |
+| 161 | SNMP |
 
+## OSI Model
 
+Mnemonic: **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way
 
-TCP works on a three-way handshake
+| Layer | Name | Examples |
+|-------|------|----------|
+| 1 | Physical | Cables, Cat6 |
+| 2 | Data Link | Switches, MAC addresses |
+| 3 | Network | IP addresses, routing |
+| 4 | Transport | TCP/UDP |
+| 5 | Session | Session management |
+| 6 | Presentation | WMV, JPEG, MOV |
+| 7 | Application | HTTP, SMTP |
 
-Sends a SYN Packet
+## Subnetting
 
-Receives SYN-ACK - Acknowledge send back
+Most common: `/24` (255.255.255.0)
 
-Send ACK  - Good to keep going
+Example: `172.16.50.0/24`
+- Network ID: `172.16.50.0`
+- Broadcast: `172.16.50.255`
+- Usable hosts: 254 (network and broadcast take 2)
 
-
-
-Ports
-
-TCP
-
-FTP 21
-
-SSH 22
-
-Telnet 23
-
-SMTP 25
-
-DNS 53
-
-HTTP 80 / 443
-
-POP3 110
-
-SMB 139+445 - most common for pentesting / file share
-
-IMAP 143
-
-
-
-UDP
-
-DNS 53
-
-DHCP 67,68
-
-TFTP 69
-
-SNMP 161 - used to gather strings\
-
-
-
-
-OSI Model
-
-Please - Physical - data cables, cat6
-
-Do - Data- Switching, Mac Address
-
-Not - Network - IP Addresses, routing
-
-Throw - Transport - TCP/UDP
-
-Sausage - Session - Session Management
-
-Pizza - Presentation - WMV, JPEG, MOV
-
-Away - Application - HTTP, SMTP
-
-
-
-Subnetting
-
-255.255.255.0 = /24 which is the most common household and small businesses
-
-
-
-Network ID and Network Broadcast take 2 hosts usually
-
-IE
-
-192.168.1.0/24 Subnet 255.255.255.0 network ID 192.168.1.0 Broadcast 192.168.1.255
-
-
-
-{% embed url="http://ipaddressguide.com" %}
-
-
-
-
-
+**Calculator:** https://ipaddressguide.com

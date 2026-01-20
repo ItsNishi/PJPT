@@ -1,51 +1,54 @@
-# Scripting with Base
+# Scripting with Bash
 
-ifconfig
+## Ping Sweep Script
 
+### Basic Ping Commands
 
+```bash
+# Single ping
+ping -c 1 TARGET_IP
 
-ping #address -c 1 -- sends 1 packet
+# Save to file
+ping -c 1 TARGET_IP > ip.txt
 
-&#x20;ping #address -c 1 > ip.txt -- saves to ping to text file
+# Extract IP from output
+cat ip.txt | grep "64 bytes" | cut -d " " -f 4 | tr -d ":"
+```
 
-cat ip.txt | grep "64 bytes" - extracts 1 line of data and pints to cli
+### IP Sweep Script
 
-cat ip.txt | grep "64 bytes" | cut -d " " -f 4 -- cuts the data and only prints the ip. the delimiter uses " " to jump between the characters and finds the ip in the text file
+```bash
+#!/bin/bash
 
-cat ip.txt | grep "64 bytes" | cut -d " " -f 4 L tr -d ":" --- used translate to get rid of the colon at the end of the ip address
+if [ "$1" == "" ]
+then
+    echo "You forgot an IP address!"
+    echo "Syntax: ./ipsweep.sh 172.16.50"
+else
+    for ip in $(seq 1 254); do
+        ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+    done
+fi
+```
 
+**Note:** Using `&` runs pings in parallel (faster). Using `;` runs sequentially (slower).
 
+### Usage
 
-`pingsweep -`
+```bash
+# Make executable
+chmod +x ipsweep.sh
 
-`#!/bin/bash`
+# Run and save results
+./ipsweep.sh 172.16.50 > ips.txt
+```
 
-`if [ "$1" == "" ]`&#x20;
+## Automated Nmap Scanning
 
-`then`&#x20;
+```bash
+# Scan all discovered hosts
+for ip in $(cat ips.txt); do nmap $ip & done
 
-`echo "You forgot an IP address!"`&#x20;
-
-`echo "Syntax: ./ipsweep.sh 192.168.1"`
-
-`else`&#x20;
-
-`for ip in seq 1 254; do`&#x20;
-
-`ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" & ---- can use ; instead of &, but will run slower.`
-
-`done`&#x20;
-
-`fi`
-
-
-
-can be stored in file
-
-./ipsweep.sh 192.168.1 > ips.txt
-
-
-
-nmap -T4 -A -p -- scan all and scan ports
-
-for ip in $(cat ips.txt); do nmap $ip; & done
+# Full scan
+nmap -T4 -A -p- TARGET_IP
+```

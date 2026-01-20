@@ -1,39 +1,60 @@
 # Strings
 
-Creating first script
+## Creating Scripts
 
-mousepad first.py& - opens text editor named first.py and lets you use the command line still
+```bash
+# Open editor in background (can still use terminal)
+mousepad first.py &
+```
 
+## Basic Python Structure
 
+```python
+#!/bin/python3
 
-\#!/bin/python3 -- important for linux as it calls out the directory
+# This is a comment
+print("Hello, world!")
+```
 
-\#- is used to create a comment
+The shebang (`#!/bin/python3`) tells Linux which interpreter to use.
 
-print("hello, world") - prints hello world
+## String Types
 
-can use single quotes 'Hello' , double quotes "Hello", or even triple-double quotes for multi-line """ hello
+```python
+# Single quotes
+print('Hello')
 
-hello"""
+# Double quotes
+print("Hello")
 
-can also concatenate strings
+# Multi-line (triple quotes)
+print("""Hello,
+this spans
+multiple lines""")
+```
 
+## String Concatenation
+
+```python
 print("This string is" + " Awesome")
+```
 
-'\n' - prints new line
+## Special Characters
 
-mutli-line comment is&#x20;
+- `\n` - New line
 
-'''Hello,
+## Comments
 
-This is a multi-line
+```python
+# Single line comment
 
-comment'''
+'''
+Multi-line
+comment
+'''
 
-or
-
-"""Hello,
-
-This is a multi-line
-
-comment"""
+"""
+Also works
+for multi-line
+"""
+```

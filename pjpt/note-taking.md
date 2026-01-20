@@ -1,24 +1,27 @@
 # Note Taking
 
-Tools for note taking
+## Documentation Tools
 
-Notion: [https://www.notion.so/product](https://www.notion.so/product)
+| Tool | Link |
+|------|------|
+| Notion | https://www.notion.so/ |
+| Obsidian | https://obsidian.md/ |
+| Joplin | https://joplinapp.org/ |
+| CherryTree | https://www.giuspen.com/cherrytree/ |
+| GitBook | https://www.gitbook.com/ |
+| OneNote | https://www.onenote.com/ |
 
-Joplin: [https://joplinapp.org/](https://joplinapp.org/)
+## Screenshot Tools
 
-GitBook: [https://www.gitbook.com/](https://www.gitbook.com/)
+| Tool | Link |
+|------|------|
+| Flameshot | https://github.com/flameshot-org/flameshot |
+| Greenshot | https://getgreenshot.org/ |
 
-Obsidian: [https://obsidian.md/](https://obsidian.md/)
+## Best Practices
 
-CheryTree: [https://www.giuspen.com/cherrytree/](https://www.giuspen.com/cherrytree)
-
-OneNote: [https://products.office.com/en-us/onenote/digital-note-taking-app?rtc=1](https://products.office.com/en-us/onenote/digital-note-taking-app?rtc=1)
-
-
-
-Applications for screenshotting
-
-GreenShot: [https://getgreenshot.org/downloads/](https://getgreenshot.org/downloads)
-
-FlameShot: [https://github.com/lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot)
-
+- Document everything during engagements
+- Include timestamps
+- Save all command outputs
+- Screenshot important findings
+- Organize by target/phase

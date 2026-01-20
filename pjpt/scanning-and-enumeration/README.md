@@ -1,49 +1,49 @@
-# Scanning & Enumeration
+# Scanning and Enumeration
 
-```
-sudo netdiscover -r 192.168.1.0/24 -- scanning an ip range
-```
+## Network Discovery
 
-```
-nmap -sS - no longer stealthy - does 3 way handshake, but stops after synack
-SYN SYNACK RST - never made connection
+```bash
+sudo netdiscover -r 172.16.50.0/24
 ```
 
+## Nmap Scanning
+
+### Basic Scans
+
+```bash
+# SYN scan (stealth-ish) - sends SYN, receives SYN-ACK, sends RST
+nmap -sS TARGET_IP
+
+# Full scan with version detection and scripts
+nmap -T4 -p- -A TARGET_IP
 ```
-nmap -T4 -p- -A ip
-```
 
-\-T = speed function 1 slowest - 5 fastest, standard is 4. slower is better for detection. depends on application
+### Common Flags
 
-\-p- = scan all ports
+| Flag | Description |
+|------|-------------|
+| `-T4` | Speed (1=slowest, 5=fastest). 4 is standard. |
+| `-p-` | Scan all 65535 ports |
+| `-p 80,443` | Scan specific ports |
+| `-A` | Aggressive (OS, version, scripts, traceroute) |
+| `-sn` | Ping scan only (no port scan) |
+| `-Pn` | Skip host discovery (treat all as online) |
+| `-sV` | Version detection |
+| `-O` | OS detection |
+| `-sC` | Default scripts |
+| `--help` | Show all options |
 
-leave off -p = scans top 1000 ports
+### Scan Types
 
-\-p 80,443,53 = can scan for specific ports
+| Flag | Type |
+|------|------|
+| `-sS` | SYN scan (stealth) |
+| `-sT` | TCP connect scan |
+| `-sA` | ACK scan |
+| `-sU` | UDP scan (slow) |
+| `-sW` | Window scan |
 
-\-A = everything = version, OS,
+### Strategy
 
-\--help - help command
-
-\-sn = ping scan - disables port scan - use a ping sweep
-
-\-pn = treat all hosts as online&#x20;
-
-\-sS/sT/sA/sW/sM - TCP SYN(Stealth Scan)/Connect()/ACK/Window/Maimon scans
-
-\-sU = UDP Scan - take forever to scan do top 1000 -p
-
-\-sV Probe ioen ports to determine service/version info
-
-\-O = enables OS detection
-
-\-sC = Script scanning
-
-\-p = port
-
-\-A = OS detection,version detection,script scanning, traceroute
-
-faster to -p- than -A
-
-could script -a after -p- finished
-
+1. Fast port discovery first: `nmap -p- TARGET_IP`
+2. Then detailed scan on open ports: `nmap -A -p PORTS TARGET_IP`

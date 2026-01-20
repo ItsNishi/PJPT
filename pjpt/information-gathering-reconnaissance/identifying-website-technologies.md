@@ -1,12 +1,15 @@
 # Identifying Website Technologies
 
-See what tech runs websites
+Tools to identify what technologies a website uses.
 
-{% embed url="https://builtwith.com/" %}
+## Online Tools
 
-Web Extension
+- **BuiltWith:** https://builtwith.com/
 
-{% embed url="https://www.wappalyzer.com/" %}
+## Browser Extensions
 
-WhatWeb
+- **Wappalyzer:** https://www.wappalyzer.com/
 
+## Command Line
+
+- **WhatWeb** - Kali built-in tool

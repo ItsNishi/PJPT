@@ -1,43 +1,48 @@
 # Variables and Methods
 
-quote = "this is a string variable"
+## Variables
 
-age = 30 #integer&#x20;
-
-gpa = 3.7 #float - has a decimal
+```python
+quote = "this is a string variable"    # String
+age = 30                               # Integer
+gpa = 3.7                              # Float (decimal)
 
 print(quote)
+```
 
+## String Methods
 
+```python
+quote = "hello world"
 
-Methods are functions to a given object
+print(quote.upper())    # HELLO WORLD
+print(quote.lower())    # hello world
+print(quote.title())    # Hello World
+print(len(quote))       # 11 (character count)
+```
 
-Small example of methods
+## Type Conversion
 
-print(quote.upper()) #uppercase
+```python
+print(int(age))         # 30
+print(int(30.1))        # 30
+print(int(30.9))        # 30 (truncates, doesn't round)
+print(str(age))         # "30" (string)
+```
 
-print(quote.lower()) #lowercase
+## String Concatenation with Variables
 
-print(quote.title()) #title case
+```python
+# Must convert non-strings with str()
+print("My quote: " + quote + " and my age is " + str(age))
+```
 
-print(len(quote)) #counts characters
+## Variable Modification
 
-
-
-print(int(age)) = 30
-
-print(int(30.1)) = 30
-
-print(int(30.9)) = 30 #will not round
-
-print("This is my quote " + quote + " and my age is " + str(age) " - integers need to be converted to a string.
-
-age += 1
-
-print(age) - now should be 31
+```python
+age = 30
+age += 1        # age is now 31
 
 birthday = 1
-
-age += birthday
-
-print(age) = should now be 32
+age += birthday # age is now 32
+```

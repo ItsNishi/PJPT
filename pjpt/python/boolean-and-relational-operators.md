@@ -1,39 +1,42 @@
 # Boolean and Relational Operators
 
-Boolean expressions - True or False
+## Boolean Values
 
+```python
 bool1 = True
-
-bool2 = 3\*3 == 9 #variable bool2 does not equal 9 its saying 3\*3 is the function and it equals 9
-
+bool2 = 3 * 3 == 9    # True (expression evaluates)
 bool3 = False
+bool4 = 3 * 3 != 9    # False
 
-bool4 = 3\*3 !=9
-
-print(type(bool1)) #tells us what type
+print(type(bool1))    # <class 'bool'>
 
 bool5 = "True"
+print(type(bool5))    # <class 'str'> - string, not boolean
+```
 
-print(type(bool5)) #is a string
+## Relational Operators
 
-\#Relational and boolean operators
+```python
+greater_than = 7 > 5           # True
+less_than = 5 < 7              # True
+greater_than_equal = 7 >= 7    # True
+less_than_equal = 7 <= 7       # True
+```
 
-greater\_than = 7 > 5
+## Boolean Operators
 
-less\_than = 5 < 7
+| Expression | Result |
+|------------|--------|
+| `True and True` | True |
+| `True and False` | False |
+| `True or True` | True |
+| `True or False` | True |
+| `not True` | False |
 
-greater\_than\_equal\_to = 7 >=7
-
-less\_than\_equal\_to = 7 <= 7
-
-test\_and = True and True #True
-
-test\_and2 = True and False #False
-
-test\_or = True or True #True
-
-test\_or2 = True or False #True
-
-test\_not = not True #False
-
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+```python
+test_and = True and True      # True
+test_and2 = True and False    # False
+test_or = True or True        # True
+test_or2 = True or False      # True
+test_not = not True           # False
+```

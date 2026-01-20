@@ -1,15 +1,27 @@
 # Starting and Stopping Services
 
-sudo service apache2 start - starts apache2 webserver
+## Service Management
 
-sudo service apache2 stop - stops apache2 service
+```bash
+# Start/stop Apache
+sudo service apache2 start
+sudo service apache2 stop
 
+# Enable SSH on boot
+sudo systemctl enable ssh
 
+# Start SSH now
+sudo systemctl start ssh
+```
 
-Run webserver using python
+## Quick Web Server
 
-python3 -m http.server 80 - **m** means module and you are calling http.server to run on port 80
+Python's built-in HTTP server:
 
-cntrl + c cancels&#x20;
+```bash
+python3 -m http.server 80
+```
 
-sudo systemctl enable ssh - will enable ssh every boot
+- `-m` calls the http.server module
+- `80` is the port (needs sudo for ports < 1024)
+- `Ctrl + C` to stop

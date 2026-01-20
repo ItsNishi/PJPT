@@ -1,23 +1,24 @@
 # Subdomains
 
-sublist3r arguments
+## Sublist3r
 
-\-d domain
-
-\-t threads = number of threads for running the process
-
-\-v verbose = displays in real time
-
-```
+```bash
 sublist3r -d domain.com
 ```
 
-[crt.sh](https://crt.sh/)
+Arguments:
+- `-d` - Target domain
+- `-t` - Number of threads
+- `-v` - Verbose (real-time output)
 
-OWASP Amass
+## Certificate Search
 
-{% embed url="https://github.com/owasp-amass/amass" %}
+- **crt.sh:** https://crt.sh/
 
-to see if website is alive or not
+## OWASP Amass
 
-{% embed url="https://github.com/tomnomnom/httprobe" %}
+Advanced subdomain enumeration: https://github.com/owasp-amass/amass
+
+## Checking Live Hosts
+
+**httprobe** - Check if discovered subdomains are alive: https://github.com/tomnomnom/httprobe
