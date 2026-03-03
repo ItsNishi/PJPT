@@ -77,6 +77,7 @@
   * [Mimikatz](pjpt/post-compromise-attacks/mimikatz.md)
   * [Golden Ticket](pjpt/post-compromise-attacks/golden-ticket.md)
   * [Additional AD Attacks](pjpt/post-compromise-attacks/additional-ad-attacks.md)
+* [AD Case Studies](pjpt/ad-case-studies.md)
 
 ## Web Application Attacks
 
