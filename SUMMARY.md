@@ -64,3 +64,39 @@
   * [SMB Relay](pjpt/initial-ad-attack-vectors/smb-relay/README.md)
     * [Gaining Shell Access](pjpt/initial-ad-attack-vectors/smb-relay/gaining-shell-access.md)
 * [IPv6 Attacks](pjpt/ipv6-attacks-overview.md)
+* [Post-Compromise Enumeration](pjpt/post-compromise-enumeration/README.md)
+  * [PowerView](pjpt/post-compromise-enumeration/powerview.md)
+  * [BloodHound](pjpt/post-compromise-enumeration/bloodhound.md)
+  * [ldapdomaindump](pjpt/post-compromise-enumeration/ldapdomaindump.md)
+* [Post-Compromise Attacks](pjpt/post-compromise-attacks/README.md)
+  * [Pass the Hash / Password](pjpt/post-compromise-attacks/pass-attacks.md)
+  * [Token Impersonation](pjpt/post-compromise-attacks/token-impersonation.md)
+  * [Kerberoasting](pjpt/post-compromise-attacks/kerberoasting.md)
+  * [GPP / cPassword](pjpt/post-compromise-attacks/gpp-cpassword.md)
+  * [URL File Attacks](pjpt/post-compromise-attacks/url-file-attacks.md)
+  * [Mimikatz](pjpt/post-compromise-attacks/mimikatz.md)
+  * [Golden Ticket](pjpt/post-compromise-attacks/golden-ticket.md)
+  * [Additional AD Attacks](pjpt/post-compromise-attacks/additional-ad-attacks.md)
+
+## Web Application Attacks
+
+* [Web Application Attacks](pjpt/web-application-attacks/README.md)
+  * [SQL Injection](pjpt/web-application-attacks/sql-injection.md)
+  * [Cross-Site Scripting (XSS)](pjpt/web-application-attacks/xss.md)
+  * [Command Injection](pjpt/web-application-attacks/command-injection.md)
+  * [IDOR](pjpt/web-application-attacks/idor.md)
+  * [File Inclusion (LFI/RFI)](pjpt/web-application-attacks/file-inclusion.md)
+  * [XXE](pjpt/web-application-attacks/xxe.md)
+
+## Post Exploitation
+
+* [Post Exploitation](pjpt/post-exploitation/README.md)
+  * [File Transfers](pjpt/post-exploitation/file-transfers.md)
+  * [Pivoting](pjpt/post-exploitation/pivoting.md)
+  * [Maintaining Access](pjpt/post-exploitation/maintaining-access.md)
+  * [Cleanup](pjpt/post-exploitation/cleanup.md)
+
+## Report Writing
+
+* [Report Writing](pjpt/report-writing/README.md)
+  * [Legal Documents and Scope](pjpt/report-writing/legal-and-scope.md)
