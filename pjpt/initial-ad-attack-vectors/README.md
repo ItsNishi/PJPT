@@ -1,2 +1,0 @@
-# Initial AD Attack Vectors
-
