@@ -23,6 +23,7 @@ Based on the [Practical Ethical Hacking](https://academy.tcm-sec.com/p/practical
 
 ### 💻 Scanning and Exploitation
 - [Scanning and Enumeration](pjpt/scanning-and-enumeration/README.md)
+  - Website enumeration (dirb, ffuf, gobuster, nikto)
 - [Exploitation Basics](pjpt/exploitation-basics/README.md)
   - SMB/SSH enumeration, vulnerability research, password cracking, reverse shells
 
@@ -31,6 +32,22 @@ Based on the [Practical Ethical Hacking](https://academy.tcm-sec.com/p/practical
 - [Initial Attack Vectors](pjpt/initial-ad-attack-vectors/README.md)
   - LLMNR poisoning, SMB relay attacks
 - [IPv6 Attacks](pjpt/ipv6-attacks-overview.md)
+- [Post-Compromise Enumeration](pjpt/post-compromise-enumeration/README.md)
+  - PowerView, BloodHound, ldapdomaindump
+- [Post-Compromise Attacks](pjpt/post-compromise-attacks/README.md)
+  - Pass attacks, token impersonation, Kerberoasting, GPP/cPassword, Mimikatz, Golden Ticket
+
+### 🌐 Web Application Attacks
+- [Web Application Attacks](pjpt/web-application-attacks/README.md)
+  - SQL injection, XSS, command injection, IDOR, file inclusion, XXE
+
+### 🚪 Post Exploitation
+- [Post Exploitation](pjpt/post-exploitation/README.md)
+  - File transfers, pivoting, maintaining access, cleanup
+
+### 📝 Report Writing
+- [Report Writing](pjpt/report-writing/README.md)
+  - Legal documents, scope, report structure
 
 ---
 
@@ -44,19 +61,15 @@ Based on the [Practical Ethical Hacking](https://academy.tcm-sec.com/p/practical
 | Python | ✅ Done |
 | Ethical Hacker Methodology | ✅ Done |
 | Information Gathering | ✅ Done |
-| Scanning and Enumeration | 🔶 Partial |
+| Scanning and Enumeration | ✅ Done |
 | Exploitation Basics | ✅ Done |
 | Active Directory Overview | ✅ Done |
 | AD Initial Attack Vectors | ✅ Done |
-| AD Post-Compromise Enumeration | ⬜ Not Started |
-| AD Post-Compromise Attacks | ⬜ Not Started |
-| Domain Compromise | ⬜ Not Started |
-| Additional AD Attacks | ⬜ Not Started |
-| Post Exploitation | ⬜ Not Started |
-| Web Application Enumeration | ⬜ Not Started |
-| Web Vulnerabilities | ⬜ Not Started |
-| Wireless Pentesting | ⬜ Not Started |
-| Legal and Report Writing | ⬜ Not Started |
+| AD Post-Compromise Enumeration | ✅ Done |
+| AD Post-Compromise Attacks | ✅ Done |
+| Web Application Attacks | ✅ Done |
+| Post Exploitation | ✅ Done |
+| Report Writing | ✅ Done |
 
 ---
 
